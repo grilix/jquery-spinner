@@ -8,6 +8,7 @@ A simple spinner for your forms.
 
 #Example
 Find an example at: example/index.html
+You can find the example live at: http://demos.grilix.com/jquery-spinner
 
 [@grilix](http://twitter.com/grilix)
 
