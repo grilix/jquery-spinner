@@ -35,11 +35,20 @@
     set: function(element) {
       this.hide();
       this.show(element);
+      var me = this;
+
+      element.on('hideSpinner', function() {
+        me.hide();
+      });
     }
   };
 
   $.setSpinnerDefaults = function(options) {
     $.extend(defaults, options);
+  };
+
+  $.fn.hideSpinner = function() {
+    return this.trigger('spinner:hide');
   };
 
   $.fn.submitSpinner = function(options) {
@@ -50,6 +59,9 @@
     return this.submit(function() {
       var element = $(this).find(_options.target);
 
+      $(this).on('spinner:hide', function() {
+        _options.hide();
+      });
       _options.set(element);
     });
   };
@@ -65,7 +77,7 @@
   $.fn.clickSpinner = function(options) {
     var _options = $.extend({}, defaults, options);
 
-    return $(this).click(function() {
+    return this.click(function() {
       _options.set($(this));
     });
   };

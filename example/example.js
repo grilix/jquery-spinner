@@ -4,6 +4,10 @@ jQuery(function($) {
     return false;
   });
 
+  $('.hide-spinners').click(function() {
+    $('.in-element input, .in-form').hideSpinner();
+  });
+
   $.setSpinnerDefaults({image: '../img/loading.gif', position: 'after'});
 
   $('form.click input').clickSpinner();

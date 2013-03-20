@@ -47,7 +47,7 @@
     <div>
       <h2>spinner on click</h2>
 
-      <form class="click">
+      <form class="click in-element">
         <input type="button" value="click" />
       </form>
 
@@ -55,9 +55,19 @@
     </div>
 
     <div>
+      <h2>clear spinner</h2>
+
+      <input type="button" class="hide-spinners" value="hide spinner" />
+      <pre>$('.hide-spinner').click(function() {
+  $('form input').hideSpinner();
+  $('form').hideSpinner();
+});</pre>
+    </div>
+
+    <div>
       <h2>spinner on submit</h2>
 
-      <form class="submit">
+      <form class="submit in-form">
         <input type="text" />
         <input type="submit" value="submit" />
       </form>
@@ -68,7 +78,7 @@
     <div>
       <h2>spinner on specific element</h2>
 
-      <form class="multi_submit">
+      <form class="multi_submit in-form">
         <input type="text" />
         <input type="submit" value="submit 1" class="submit1" />
         <input type="submit" value="submit 2" class="submit2" />
@@ -80,7 +90,7 @@
     <div>
       <h2>spinner off</h2>
 
-      <form class="spinneroff">
+      <form class="spinneroff in-element">
         <input type="button" value="click" />
       </form>
 
