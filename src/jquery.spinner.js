@@ -37,7 +37,7 @@
       this.show(element);
       var me = this;
 
-      element.on('hideSpinner', function() {
+      element.on('spinner:hide', function() {
         me.hide();
       });
     }
